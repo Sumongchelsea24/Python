@@ -42,3 +42,13 @@
 # s.m2()
 # print(s._x)#napaune parne ho tara paenxa 
 
+#Data hiding
+# class Account:
+#   def __init__(self,min_balance):
+#     self.balance=min_balance
+#   def getBalance(self):
+#     #validation
+#     return self.__balance
+# a=Account(2000)
+# print(a.getBalance())
+# #print(a.__balance)
