@@ -11,11 +11,12 @@
 # c.property()
 # c.wife()
 
-class P:
-  def __init__(self):
-    print("Parent class constructor")
-class C(P):
-  def __init__(self):
-    super().__init__()# parent ko call garna
-    print("Child class constructor")
-c=C()
+# class P:
+#   def __init__(self):
+#     print("Parent class constructor")
+# class C(P):
+#   def __init__(self):
+#     super().__init__()# parent ko call garna
+#     print("Child class constructor")
+# c=C()
+
