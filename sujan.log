@@ -1,0 +1,5 @@
+2026-06-10 10:05:03,259:DEBUG:mylogger:This is debug message
+2026-06-10 10:05:03,259:INFO:mylogger:This is info message
+2026-06-10 10:05:03,260:WARNING:mylogger:This is warning message
+2026-06-10 10:05:03,260:ERROR:mylogger:This is error message
+2026-06-10 10:05:03,260:CRITICAL:mylogger:This is critical message
