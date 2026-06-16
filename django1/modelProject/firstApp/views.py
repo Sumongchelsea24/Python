@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from firstApp.models import Employee
 
 # Create your views here.
 def index(request):
-  s="Hello"
-  return HttpResponse(s)
+  emp_list=Employee.objects.all()
+  context={'emp_list':emp_list}
+  return render(request,"firstApp/index.html",context=context)
