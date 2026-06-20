@@ -1,0 +1,49 @@
+<!doctype html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'css/hello.css' %}" />
+  </head>
+  <body>
+    <h1>Employee List</h1>
+    <!-- <img src="{% static 'images/house.jpg' %}" alt="" /> -->
+    <table>
+      <thead>
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Hire Date</th>
+          <th>Job Title</th>
+          <th>Is active</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%for employee in employees%}
+        <tr>
+          {% load cust_filters %}
+          <td>{{employee.first_name |f3upper }}</td>
+          <td>{{employee.last_name}}</td>
+          <td>{{employee.email}}</td>
+          <td>{{employee.phone_number}}</td>
+          <td>{{employee.hire_date | timesince}}</td>
+          <td>{{employee.job_title}}</td>
+          <td>{{employee.is_active}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <h2>Fill this form to add records.</h2>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form-group">{{form.as_p}}</div>
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
