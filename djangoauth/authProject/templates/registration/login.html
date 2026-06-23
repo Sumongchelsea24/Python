@@ -1,0 +1,19 @@
+<!doctype html>
+<!-- prettier-ignore -->
+{% extends '../myApp/base.html' %}
+
+{% block title_block %}
+  Home
+{% endblock title_block %}
+
+{% block child_block %}
+
+<div class="container">
+  <h2>Login to enter</h2>
+  <form action="" method="post">
+    {% csrf_token %} {{form.as_p}}
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+{% endblock child_block %}
