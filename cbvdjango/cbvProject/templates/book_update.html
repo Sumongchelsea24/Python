@@ -1,0 +1,16 @@
+<!-- prettier-ignore -->
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- prettier-ignore -->
+<h2>Update your book</h2>
+<form action="" method="post">
+  <!-- prettier-ignore -->
+  {% csrf_token %}
+  <!-- prettier-ignore -->
+  {{form.as_p}}
+  <button type="submit">Save changes</button>
+</form>
+<a href="{% url 'book-list' %}">Cancel</a>
+
+{% endblock content %}

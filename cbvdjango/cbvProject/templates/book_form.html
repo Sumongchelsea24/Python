@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+<!-- prettier-ignore -->
+{% block content %}
+<div class="container">
+  <!-- prettier-ignore -->
+  <h2>Add a new book here</h2>
+  <form action="" method="post">
+    <!-- prettier-ignore -->
+    {% csrf_token %}
+    <!-- prettier-ignore -->
+    {{form.as_p}}
+    <button type="submit">Save</button>
+  </form>
+</div>
+{% endblock content %}

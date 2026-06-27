@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+<!-- prettier-ignore -->
+{% block content %}
+<div class="container">
+  <!-- prettier-ignore -->
+  <h2>Are you sure you want to delete "{{object.title}}"</h2>
+  <form action="" method="post">
+    <!-- prettier-ignore -->
+    {% csrf_token %}
+    <!-- prettier-ignore -->
+    {{form.as_p}}
+    <button type="submit">Confirm Delete</button>
+    <a href="{% url 'book-list' %}">Cancel</a>
+  </form>
+</div>
+{% endblock content %}
